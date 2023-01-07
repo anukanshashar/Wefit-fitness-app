@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".areas.Arms">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="88dp"
+            android:layout_marginLeft="88dp"
+            android:layout_marginTop="42dp"
+            android:layout_marginEnd="-88dp"
+            android:layout_marginRight="-88dp"
+            android:text="Water Intake"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="61dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="306dp"
+            android:layout_marginRight="306dp"
+            app:srcCompat="@drawable/water" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="3300px"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="110dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/corner4"
+            android:orientation="horizontal"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="200dip">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="There are many options for what to drink, but water is the best choice for most people who have access to safe drinking water. It is calorie-free and as easy to find as the nearest tap.\nWater helps to restore fluids lost through metabolism, breathing, sweating, and the removal of waste. It helps to keep you from overheating, lubricates the joints and tissues, maintains healthy skin, and is necessary for proper digestion. It’s the perfect zero-calorie beverage for quenching thirst and rehydrating your body.
+\n\n\nHow Much Water Do I Need?\n\n
+Water is an essential nutrient at every age, so optimal hydration is a key component for good health. Water accounts for about 60% of an adult’s body weight. \nWe drink fluids when we feel thirst, the major signal alerting us when our body runs low on water. We also customarily drink beverages with meals to help with digestion. \n
+But sometimes we drink not based on these factors but on how much we think we should be drinking. One of the most familiar sayings is to aim for “8 glasses a day,” but this may not be appropriate for every person.
+\nKeep in mind that about 20% of our total water intake comes not from beverages but from water-rich foods like lettuce, leafy greens, cucumbers, bell peppers, summer squash, celery, berries, and melons.
+
+\nAside from including water-rich foods, the following chart is a guide for daily water intake based on age group from the National Academy of Medicine:"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:layout_width="310dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/table"
+                    android:layout_marginTop="860dp"
+                    android:layout_marginStart="20dp"/>
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
