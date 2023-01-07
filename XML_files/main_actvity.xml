@@ -1,336 +1,914 @@
-package com.example.fitnessapp;
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
+    <ScrollView
+        android:layout_width="1080px"
+        android:layout_height="40000px">
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="3000px"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true">
 
-import com.example.fitnessapp.areas.Abs;
-import com.example.fitnessapp.areas.Arms;
-import com.example.fitnessapp.areas.Back;
-import com.example.fitnessapp.areas.Bicep;
-import com.example.fitnessapp.areas.Legs;
-import com.example.fitnessapp.areas.Shoulder;
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="23dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="252dp"
+                app:srcCompat="@drawable/logo_new_black" />
 
-import java.util.ArrayList;
+            <RelativeLayout
+                android:layout_width="322dp"
+                android:layout_height="255dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="206dp"
+                android:layout_marginEnd="36dp"
+                android:layout_marginRight="36dp"
+                android:background="@drawable/button">
 
-public class MainActivity extends AppCompatActivity {
-    ImageButton arms,back,bicep,shoulder,abs,legs;
-    int i=1,i1=1,i2=1,i3=1,i4=1,j1=1,j2=1,j3=1,j4=1;
-    ArrayList<String> Activity = new ArrayList<String>();
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+                <ImageButton
+                    android:id="@+id/abs"
+                    android:layout_width="94dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="211dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/abs" />
 
-        Button help = (Button) findViewById(R.id.help);
-        // all the buttons of Main_Activity
-        arms = (ImageButton) findViewById(R.id.arms);
-        back = (ImageButton) findViewById(R.id.back);
-        bicep = (ImageButton) findViewById(R.id.bicep);
-        shoulder = (ImageButton) findViewById(R.id.shoulder);
-        legs = (ImageButton) findViewById(R.id.legs);
-        abs = (ImageButton) findViewById(R.id.abs);
 
-        help.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Info.class);
-                startActivity(intent);
-            }
-        });
-        // all the listeners of Main_Activity
-        arms.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openArms();
-            }
-        });
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openBack();
-            }
-        });
-        bicep.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openBicep();
+                <TextView
 
-            }
-        });
-        shoulder.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openShoulder();
-            }
-        });
-        legs.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openLegs();
-            }
-        });
-        abs.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openAbs();
-            }
-        });
-        }
-    private void openArms() {
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
 
-        Intent intent = new Intent(this, Arms.class);
-        if(i1==1||i1==6||i1==11||i1==16||i1==21||i1==26) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",j1);
-            intent.putExtras(bundle);
-            j1++;}
-        if(i1==2||i1==3||i1==4||i1==5) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",1);
-            intent.putExtras(bundle);
-        }
-        if(i1==7||i1==8||i1==9||i1==10) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",2);
-            intent.putExtras(bundle);
-        }
-        if(i1==12||i1==13||i1==14||i1==15) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",3);
-            intent.putExtras(bundle);
-        }
-        if(i1==17||i1==18||i1==19||i1==20) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",4);
-            intent.putExtras(bundle);
-        }
-        if(i1==22||i1==23||i1==24||i1==25) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",5);
-            intent.putExtras(bundle);
-        }
-        if(i1==27||i1==28||i1==29||i1==30) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",6);
-            intent.putExtras(bundle);
-        }
-        ++i1;
-        startActivity(intent);
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="228dp"
+                    android:layout_marginLeft="228dp"
+                    android:layout_marginTop="105dp"
+                    android:layout_marginEnd="38dp"
+                    android:layout_marginRight="38dp"
+                    android:inputType="textPersonName"
+                    android:text="ABS"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
 
-    }
+                <ImageButton
+                    android:id="@+id/arms"
+                    android:layout_width="83dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginEnd="223dp"
+                    android:layout_marginRight="223dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/arm" />
 
-    private void openBack() {
-        Intent intent = new Intent(this, Back.class);
+                <TextView
 
-        if(i2==1||i2==6||i2==11||i2==16||i2==21||i2==26) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",j2);
-            intent.putExtras(bundle);
-            j2++;}
-        if(i2==2||i2==3||i2==4||i2==5) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",1);
-            intent.putExtras(bundle);
-            }
-        if(i2==7||i2==8||i2==9||i2==10) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",2);
-            intent.putExtras(bundle);
-        }
-        if(i2==12||i2==13||i2==14||i2==15) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",3);
-            intent.putExtras(bundle);
-        }
-        if(i2==17||i2==18||i2==19||i2==20) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",4);
-            intent.putExtras(bundle);
-        }
-        if(i2==22||i2==23||i2==24||i2==25) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",5);
-            intent.putExtras(bundle);
-        }
-        if(i2==27||i2==28||i2==29||i2==30) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",6);
-            intent.putExtras(bundle);
-        }
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
 
-        i2++;
-        startActivity(intent);
-    }
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="29dp"
+                    android:layout_marginLeft="29dp"
+                    android:layout_marginTop="107dp"
+                    android:layout_marginEnd="228dp"
+                    android:layout_marginRight="228dp"
+                    android:inputType="textPersonName"
+                    android:text="TRICEPS"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
 
-    private void openBicep() {
-        Intent intent = new Intent(this, Bicep.class);
-        if(i3==1||i3==6||i3==11||i3==16||i3==21||i3==26) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",j3);
-            intent.putExtras(bundle);
-            j3++;}
-        if(i3==2||i3==3||i3==4||i3==5) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",1);
-            intent.putExtras(bundle);
-        }
-        if(i3==7||i3==8||i3==9||i3==10) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",2);
-            intent.putExtras(bundle);
-        }
-        if(i3==12||i3==13||i3==14||i3==15) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",3);
-            intent.putExtras(bundle);
-        }
-        if(i3==17||i3==18||i3==19||i3==20) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",4);
-            intent.putExtras(bundle);
-        }
-        if(i3==22||i3==23||i3==24||i3==25) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",5);
-            intent.putExtras(bundle);
-        }
-        if(i3==27||i3==28||i3==29||i3==30) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",6);
-            intent.putExtras(bundle);
-        }
-        ++i3;
-        startActivity(intent);
+                <ImageButton
+                    android:id="@+id/back"
+                    android:layout_width="90dp"
+                    android:layout_height="79dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="109dp"
+                    android:layout_marginLeft="109dp"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginEnd="122dp"
+                    android:layout_marginRight="122dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/back" />
 
-    }
+                <TextView
 
-    private void openShoulder(){
-        Intent intent = new Intent(this, Shoulder.class);
-        if(i4==1||i4==6||i4==11||i4==16||i4==21||i4==26) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",j4);
-            intent.putExtras(bundle);
-            j4++;}
-        if(i4==2||i4==3||i4==4||i4==5) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",1);
-            intent.putExtras(bundle);
-        }
-        if(i4==7||i4==8||i4==9||i4==10) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",2);
-            intent.putExtras(bundle);
-        }
-        if(i4==12||i4==13||i4==14||i4==15) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",3);
-            intent.putExtras(bundle);
-        }
-        if(i4==17||i4==18||i4==19||i4==20) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",4);
-            intent.putExtras(bundle);
-        }
-        if(i4==22||i4==23||i4==24||i4==25) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",5);
-            intent.putExtras(bundle);
-        }
-        if(i4==27||i4==28||i4==29||i4==30) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",6);
-            intent.putExtras(bundle);
-        }
-        ++i4;
-        startActivity(intent);
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
 
-    }
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="126dp"
+                    android:layout_marginLeft="126dp"
+                    android:layout_marginTop="105dp"
+                    android:layout_marginEnd="140dp"
+                    android:layout_marginRight="140dp"
+                    android:inputType="textPersonName"
+                    android:text="BACK"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
 
-    private void openLegs(){
-        Intent intent = new Intent(this, Legs.class);
-        if(i5==1||i5==6||i5==11||i5==16||i5==21||i5==26) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",j5);
-            intent.putExtras(bundle);
-            j5++;}
-        if(i5==2||i5==3||i5==4||i5==5) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",1);
-            intent.putExtras(bundle);
-        }
-        if(i5==7||i5==8||i5==9||i5==10) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",2);
-            intent.putExtras(bundle);
-        }
-        if(i5==12||i5==13||i5==14||i5==15) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",3);
-            intent.putExtras(bundle);
-        }
-        if(i5==17||i5==18||i5==19||i5==20) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",4);
-            intent.putExtras(bundle);
-        }
-        if(i5==22||i5==23||i5==24||i5==25) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",5);
-            intent.putExtras(bundle);
-        }
-        if(i5==27||i5==28||i5==29||i5==30) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",6);
-            intent.putExtras(bundle);
-        }
-        ++i5;
-        startActivity(intent);
+                <ImageButton
+                    android:id="@+id/bicep"
+                    android:layout_width="56dp"
+                    android:layout_height="51dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="146dp"
+                    android:layout_marginEnd="231dp"
+                    android:layout_marginRight="231dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/bicep" />
 
-    }
+                <TextView
 
-    private void openAbs(){
-        Intent intent = new Intent(this, Abs.class);
-        if(i6==1||i6==6||i6==11||i6==16||i6==21||i6==26) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",j6);
-            intent.putExtras(bundle);
-            j6++;}
-        if(i6==2||i6==3||i6==4||i6==5) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",1);
-            intent.putExtras(bundle);
-        }
-        if(i6==7||i6==8||i6==9||i6==10) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",2);
-            intent.putExtras(bundle);
-        }
-        if(i6==12||i6==13||i6==14||i6==15) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",3);
-            intent.putExtras(bundle);
-        }
-        if(i6==17||i6==18||i6==19||i6==20) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",4);
-            intent.putExtras(bundle);
-        }
-        if(i6==22||i6==23||i6==24||i6==25) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",5);
-            intent.putExtras(bundle);
-        }
-        if(i6==27||i6==28||i6==29||i6==30) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("times",6);
-            intent.putExtras(bundle);
-        }
-        ++i6;
-        startActivity(intent);
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
 
-    }}
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginLeft="27dp"
+                    android:layout_marginTop="216dp"
+                    android:layout_marginEnd="239dp"
+                    android:layout_marginRight="239dp"
+                    android:inputType="textPersonName"
+                    android:text="BICEPS"
+
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/shoulder"
+                    android:layout_width="93dp"
+                    android:layout_height="90dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="109dp"
+                    android:layout_marginLeft="109dp"
+                    android:layout_marginTop="126dp"
+                    android:layout_marginEnd="119dp"
+                    android:layout_marginRight="119dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/shoulder" />
+
+                <TextView
+
+                    android:layout_width="79dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="116dp"
+                    android:layout_marginLeft="116dp"
+                    android:layout_marginTop="217dp"
+                    android:layout_marginEnd="126dp"
+                    android:layout_marginRight="126dp"
+                    android:inputType="textPersonName"
+                    android:text="SHOULDER"
+
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/legs"
+                    android:layout_width="89dp"
+                    android:layout_height="90dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="214dp"
+                    android:layout_marginLeft="214dp"
+                    android:layout_marginTop="126dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginRight="18dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/legs" />
+
+                <TextView
+
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="231dp"
+                    android:layout_marginLeft="231dp"
+                    android:layout_marginTop="217dp"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginRight="35dp"
+                    android:inputType="textPersonName"
+                    android:text="LEGS"
+
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="322dp"
+                android:layout_height="140dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="37dp"
+                android:layout_marginTop="525dp"
+                android:layout_marginEnd="34dp"
+                android:layout_marginRight="34dp"
+                android:background="@drawable/button">
+
+                <ImageButton
+                    android:id="@+id/muscles"
+                    android:layout_width="89dp"
+                    android:layout_height="92dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="194dp"
+                    android:layout_marginLeft="194dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="38dp"
+                    android:layout_marginRight="38dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/muscles" />
+
+                <TextView
+
+                    android:layout_width="98dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="93dp"
+                    android:layout_marginEnd="200dp"
+                    android:layout_marginRight="200dp"
+                    android:inputType="textPersonName"
+                    android:text="WEIGHT"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="98dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="110dp"
+                    android:layout_marginEnd="200dp"
+                    android:layout_marginRight="200dp"
+                    android:inputType="textPersonName"
+                    android:text="LOSS"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/toneup"
+                    android:layout_width="68dp"
+                    android:layout_height="65dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="121dp"
+                    android:layout_marginLeft="121dp"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginEnd="133dp"
+                    android:layout_marginRight="133dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/shoulder" />
+
+                <TextView
+
+                    android:layout_width="92dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="193dp"
+                    android:layout_marginLeft="193dp"
+                    android:layout_marginTop="93dp"
+                    android:layout_marginEnd="37dp"
+                    android:layout_marginRight="37dp"
+                    android:inputType="textPersonName"
+                    android:text="BUILD"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="92dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="193dp"
+                    android:layout_marginLeft="193dp"
+                    android:layout_marginTop="110dp"
+                    android:layout_marginEnd="37dp"
+                    android:layout_marginRight="37dp"
+                    android:inputType="textPersonName"
+                    android:text="MUSCLES"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/wloss"
+                    android:layout_width="65dp"
+                    android:layout_height="58dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginEnd="221dp"
+                    android:layout_marginRight="221dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/wloss" />
+
+                <TextView
+
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="126dp"
+                    android:layout_marginLeft="126dp"
+                    android:layout_marginTop="93dp"
+                    android:layout_marginEnd="140dp"
+                    android:layout_marginRight="140dp"
+                    android:inputType="textPersonName"
+                    android:text="TONE"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="127dp"
+                    android:layout_marginLeft="127dp"
+                    android:layout_marginTop="109dp"
+                    android:layout_marginEnd="139dp"
+                    android:layout_marginRight="139dp"
+                    android:inputType="textPersonName"
+                    android:text="UP"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+    android:id="@+id/help"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:layout_marginTop="96dp"
+    android:layout_marginStart="330dp"
+    android:background="@drawable/ic_baseline_help_outline_24"/>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="59dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="101dp"
+                android:layout_marginEnd="-27dp"
+                android:layout_marginRight="-27dp"
+                android:text="Welcome!"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="59dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="-8dp"
+                android:layout_marginLeft="-8dp"
+                android:layout_marginTop="143dp"
+                android:layout_marginEnd="11dp"
+                android:layout_marginRight="11dp"
+                android:text="~ effort is the best indicator of interest ~"
+                android:textAlignment="center"
+                android:textColor="@color/grey"
+                android:textSize="16dp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="344dp"
+                android:layout_height="54dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="73dp"
+                android:layout_marginLeft="73dp"
+                android:layout_marginTop="175dp"
+                android:layout_marginEnd="-23dp"
+                android:layout_marginRight="-23dp"
+                android:text="Start from ~"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="normal" />
+
+
+            <TextView
+                android:layout_width="344dp"
+                android:layout_height="54dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="69dp"
+                android:layout_marginLeft="64dp"
+                android:layout_marginTop="490dp"
+                android:layout_marginEnd="-7dp"
+                android:layout_marginRight="-7dp"
+                android:text="Full body workout plans ~"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="344dp"
+                android:layout_height="54dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="67dp"
+                android:layout_marginLeft="67dp"
+                android:layout_marginTop="683dp"
+                android:layout_marginEnd="-3dp"
+                android:layout_marginRight="-3dp"
+                android:text="Want something light?"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="normal" />
+
+            <RelativeLayout
+                android:layout_width="322dp"
+                android:layout_height="130dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="33dp"
+                android:layout_marginTop="718dp"
+                android:layout_marginEnd="38dp"
+                android:layout_marginRight="38dp"
+                android:background="@drawable/button">
+
+                <ImageButton
+                    android:id="@+id/meditation"
+                    android:layout_width="91dp"
+                    android:layout_height="83dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="195dp"
+                    android:layout_marginLeft="195dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginRight="35dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/meditation" />
+
+                <TextView
+
+                    android:layout_width="98dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="93dp"
+                    android:layout_marginEnd="200dp"
+                    android:layout_marginRight="200dp"
+                    android:inputType="textPersonName"
+                    android:text="STRETCHING"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/yoga"
+                    android:layout_width="53dp"
+                    android:layout_height="58dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="128dp"
+                    android:layout_marginLeft="128dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="141dp"
+                    android:layout_marginRight="141dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/stretching" />
+
+                <TextView
+
+                    android:layout_width="92dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="194dp"
+                    android:layout_marginLeft="194dp"
+                    android:layout_marginTop="93dp"
+                    android:layout_marginEnd="36dp"
+                    android:layout_marginRight="36dp"
+                    android:inputType="textPersonName"
+                    android:text="MEDITATION"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/streching"
+                    android:layout_width="94dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginEnd="208dp"
+                    android:layout_marginRight="208dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/yoga" />
+
+                <TextView
+
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="127dp"
+                    android:layout_marginLeft="127dp"
+                    android:layout_marginTop="93dp"
+                    android:layout_marginEnd="139dp"
+                    android:layout_marginRight="139dp"
+                    android:inputType="textPersonName"
+                    android:text="YOGA"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="344dp"
+                android:layout_height="54dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="67dp"
+                android:layout_marginLeft="67dp"
+                android:layout_marginTop="876dp"
+                android:layout_marginEnd="-3dp"
+                android:layout_marginRight="-3dp"
+                android:text="Suggestions on ~"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="normal" />
+
+            <RelativeLayout
+                android:layout_width="322dp"
+                android:layout_height="140dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="33dp"
+                android:layout_marginTop="908dp"
+                android:layout_marginEnd="38dp"
+                android:layout_marginRight="38dp"
+                android:background="@drawable/button">
+
+
+                <ImageButton
+                    android:id="@+id/food"
+                    android:layout_width="81dp"
+                    android:layout_height="75dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="68dp"
+                    android:layout_marginLeft="68dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="187dp"
+                    android:layout_marginRight="187dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/food" />
+
+                <TextView
+
+                    android:layout_width="92dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="64dp"
+                    android:layout_marginLeft="64dp"
+                    android:layout_marginTop="90dp"
+                    android:layout_marginEnd="181dp"
+                    android:layout_marginRight="181dp"
+                    android:inputType="textPersonName"
+                    android:text="FOOD"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="92dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="156dp"
+                    android:layout_marginLeft="156dp"
+                    android:layout_marginTop="106dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:inputType="textPersonName"
+                    android:text="INTAKE"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/water"
+                    android:layout_width="91dp"
+                    android:layout_height="78dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="186dp"
+                    android:layout_marginLeft="186dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="47dp"
+                    android:layout_marginRight="47dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/water" />
+
+                <TextView
+
+                    android:layout_width="92dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="156dp"
+                    android:layout_marginLeft="156dp"
+                    android:layout_marginTop="90dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:inputType="textPersonName"
+                    android:text="WATER"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="92dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginTop="106dp"
+                    android:layout_marginEnd="140dp"
+                    android:layout_marginRight="140dp"
+                    android:inputType="textPersonName"
+                    android:text="INTAKE"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
+
+
+
