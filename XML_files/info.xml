@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".areas.Arms">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="88dp"
+            android:layout_marginLeft="88dp"
+            android:layout_marginTop="42dp"
+            android:layout_marginEnd="-88dp"
+            android:layout_marginRight="-88dp"
+            android:text="About App"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="61dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="306dp"
+            android:layout_marginRight="306dp"
+            app:srcCompat="@drawable/question_mark" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="4400px"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="110dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/corner4"
+            android:orientation="horizontal"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="200dip">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="Fitness as defined by experts is 'one's ability to execute daily activities with optimal performance, endurance, and strength with the management of disease, fatigue, and stress and reduced sedentary behavior'.\nThus here we are to provide the best experience and provide a self customary fitness app.\n\n\nFollowing are some features that would help you get a better experience:\n\n
+1. We do not believe in specifying fixed routines for anyone, here in WeFit we have designed the plan in every area so that no one is bound to follow a fixed schedule for a fixed duration of time.\n
+\n2. Workout plans for abs, triceps, biceps, shoulders, back and legs have 5 to 6 excersices each and the instructions for all them have been provided with the GIFs.\n\n
+3. For all of the above mentioned workouts we provided a range of set (1-6) as more than 6 sets are not advisable. So the user is free to choose any number of set according to their requirements.\n\n
+4. Due to an intelligent software the app suggests for the number of sets for everyday for the user. However if the user wants to alter the suggestion then they surely can.\n\n
+5. Each exercise is for 30 minutes with 15 rest in between and 20 minutes rest between each circuit\n\n
+6. Both pre and post workout stretches are of 35 minutes of duration and the istructions for them are provided too.\n\n
+7. For meditation we have provided audios for 1 minute, 4 minutes, 10 minutes and 15 minutes, user may choose any according to their requirement.\n\n
+8. For better effectiveness we also provided the suggestions for food and water intakes per day.\n\n
+9. The plan for the food - intake is affiliated by DIP diet by Biswaroop Ray.\n\n
+10. The plan for water - intake has been taken from the research of Harvard University.\n\n
+11. The exercises are divided into 2 groups, first of 5 days of continuous trianing and the second is rest for a day, after that the app intelligence would suggest the number of sets automatically\n\n
+12. The meditation guide is affliated from  New York Times."
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="1400dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="Thank you for choosing WeFit lets make it a wonderful experience!"
+                    android:textColor="@color/grey"
+                    android:textSize="17dp"
+                    android:textAlignment="center"
+                    android:textStyle="italic" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
