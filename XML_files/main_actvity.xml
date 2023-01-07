@@ -318,132 +318,6 @@
                 android:background="@drawable/button">
 
                 <ImageButton
-                    android:id="@+id/muscles"
-                    android:layout_width="89dp"
-                    android:layout_height="92dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerInParent="true"
-                    android:layout_marginStart="194dp"
-                    android:layout_marginLeft="194dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="38dp"
-                    android:layout_marginRight="38dp"
-                    android:background="?selectableItemBackgroundBorderless"
-                    android:scaleType="fitXY"
-                    app:srcCompat="@drawable/muscles" />
-
-                <TextView
-
-                    android:layout_width="98dp"
-                    android:layout_height="wrap_content"
-
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="93dp"
-                    android:layout_marginEnd="200dp"
-                    android:layout_marginRight="200dp"
-                    android:inputType="textPersonName"
-                    android:text="WEIGHT"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
-
-                <TextView
-
-                    android:layout_width="98dp"
-                    android:layout_height="wrap_content"
-
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="110dp"
-                    android:layout_marginEnd="200dp"
-                    android:layout_marginRight="200dp"
-                    android:inputType="textPersonName"
-                    android:text="LOSS"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
-
-                <ImageButton
-                    android:id="@+id/toneup"
-                    android:layout_width="68dp"
-                    android:layout_height="65dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerInParent="true"
-                    android:layout_marginStart="121dp"
-                    android:layout_marginLeft="121dp"
-                    android:layout_marginTop="17dp"
-                    android:layout_marginEnd="133dp"
-                    android:layout_marginRight="133dp"
-                    android:background="?selectableItemBackgroundBorderless"
-                    android:scaleType="fitXY"
-                    app:srcCompat="@drawable/shoulder" />
-
-                <TextView
-
-                    android:layout_width="92dp"
-                    android:layout_height="wrap_content"
-
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginStart="193dp"
-                    android:layout_marginLeft="193dp"
-                    android:layout_marginTop="93dp"
-                    android:layout_marginEnd="37dp"
-                    android:layout_marginRight="37dp"
-                    android:inputType="textPersonName"
-                    android:text="BUILD"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
-
-                <TextView
-
-                    android:layout_width="92dp"
-                    android:layout_height="wrap_content"
-
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginStart="193dp"
-                    android:layout_marginLeft="193dp"
-                    android:layout_marginTop="110dp"
-                    android:layout_marginEnd="37dp"
-                    android:layout_marginRight="37dp"
-                    android:inputType="textPersonName"
-                    android:text="MUSCLES"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
-
-                <ImageButton
                     android:id="@+id/wloss"
                     android:layout_width="65dp"
                     android:layout_height="58dp"
@@ -452,17 +326,17 @@
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="35dp"
+                    android:layout_marginLeft="127dp"
                     android:layout_marginTop="26dp"
-                    android:layout_marginEnd="221dp"
-                    android:layout_marginRight="221dp"
+                    android:layout_marginEnd="130dp"
+                    android:layout_marginRight="130dp"
                     android:background="?selectableItemBackgroundBorderless"
                     android:scaleType="fitXY"
                     app:srcCompat="@drawable/wloss" />
 
                 <TextView
 
-                    android:layout_width="55dp"
+                    android:layout_width="98dp"
                     android:layout_height="wrap_content"
 
                     android:layout_alignParentStart="true"
@@ -470,13 +344,13 @@
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:layout_marginStart="126dp"
-                    android:layout_marginLeft="126dp"
-                    android:layout_marginTop="93dp"
-                    android:layout_marginEnd="140dp"
-                    android:layout_marginRight="140dp"
+                    android:layout_marginStart="115dp"
+                    android:layout_marginLeft="115dp"
+                    android:layout_marginTop="110dp"
+                    android:layout_marginEnd="109dp"
+                    android:layout_marginRight="109dp"
                     android:inputType="textPersonName"
-                    android:text="TONE"
+                    android:text="LOSS"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="15dp"
@@ -484,7 +358,7 @@
 
                 <TextView
 
-                    android:layout_width="55dp"
+                    android:layout_width="98dp"
                     android:layout_height="wrap_content"
 
                     android:layout_alignParentStart="true"
@@ -492,17 +366,18 @@
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:layout_marginStart="127dp"
-                    android:layout_marginLeft="127dp"
-                    android:layout_marginTop="109dp"
-                    android:layout_marginEnd="139dp"
-                    android:layout_marginRight="139dp"
+                    android:layout_marginStart="115dp"
+                    android:layout_marginLeft="115dp"
+                    android:layout_marginTop="93dp"
+                    android:layout_marginEnd="109dp"
+                    android:layout_marginRight="109dp"
                     android:inputType="textPersonName"
-                    android:text="UP"
+                    android:text="WEIGHT"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="15dp"
                     android:textStyle="bold" />
+
             </RelativeLayout>
 
             <androidx.appcompat.widget.AppCompatButton
