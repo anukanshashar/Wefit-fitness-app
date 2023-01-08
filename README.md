@@ -32,7 +32,7 @@
    - id 'com.android.library' version '7.2.1' apply false
    - id 'org.jetbrains.kotlin.android' version '1.7.0' apply false
  
- ## Improvements
+ ## -> Improvements
  
   - Optimization of the app: making the UI experience better and more interactive for the user
   - More features and options can be added, such as sleep tracker, period calender, weight training, diet charts etc.
