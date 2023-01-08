@@ -4,7 +4,7 @@
  ## Project Inspiration
  
   - Fitness and good health has been under the radar since a few years from now, especially since the outbreak of Covid-19. People were forced to stay inside of their homes and all activities and processes were carried out online. This has had a huge impact on fitness levels of people, with increased rate of chronic diseases and other problems (both physical as well as mental) such as heart attack, cancer, depression, anxiety, dementia etc. According to te GOQii India Fit Report, only 38% Indians come under the umbrella of "fit" citizens, with women being unhealthier than men and having a worse BMI.
-  - The We-Fit fitness app is an all-in-one assistant which provides many features and options to promote physical as well as mental well-being. The app offers stretching exercises, meditation, yoga, food and water intake, personalized training routine etc, for 
+  - The We-Fit fitness app is an all-in-one assistant which provides many features and options to promote physical as well as mental well-being. The app offers stretching exercises, meditation, yoga, food and water intake, personalized training routine etc; focusing on all aspects of health and fitness in a friendly and efficient manner. 
  
  ## Project Description
  
