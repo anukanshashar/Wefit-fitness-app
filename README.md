@@ -13,7 +13,12 @@
   - All exercises have an inclusive timer along with a motivational quote which displays prior to commencement for enlightenment and motivation of the user. This app is near perfect for someone who wants to be fit in all facets, without having to leave their home. No additional apparatus/machinery is required for any of the exercises.
   - We keep mental health in mind by introducing the meditations section with audios and timers for a soothing and relaxing experience.  
   - The diet section provides a detailed description of food items to be consumed along with their calorie count, which is a function of the users physical parameters such as weight, BMI, etc. 
+  
+![WhatsApp Image 2023-01-08 at 2 08 36 PM](https://user-images.githubusercontent.com/75095886/211192165-41d746f2-f436-46cf-b1b5-2c5690c315f1.jpeg)
+![WhatsApp Image 2023-01-08 at 2 10 37 PM](https://user-images.githubusercontent.com/75095886/211192167-51762593-a079-4364-9fc3-022822cf67f3.jpeg)
+![WhatsApp Image 2023-01-08 at 2 17 54 PM](https://user-images.githubusercontent.com/75095886/211192168-5fc38dbd-c510-4b9d-ac91-c09f33fa3a47.jpeg)
 
+  
  ## -> Requirements
  
   ### Repositories
