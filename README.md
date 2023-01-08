@@ -1,5 +1,6 @@
 # Wefit-fitness-app
 
+![WhatsApp Image 2023-01-08 at 2 07 15 PM](https://user-images.githubusercontent.com/75095886/211192101-c7ad0a5e-8fa5-4977-b119-4523d5fa1c41.jpeg)
 
  ## -> Project Inspiration
  
